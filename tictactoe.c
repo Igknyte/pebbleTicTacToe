@@ -15,17 +15,21 @@ int main (void)
 				 {'7','8','9'}
 						};
 
+	void renderBoard(char** bd){
+		/*todo add somelogic*/
+	}
+	
+	void getMove(char&& bd){
+		/*to do add some logic*/
+		
+	}
 
 	for (int i = 0; i<9 && winner==0; i++)
 	{
-		printf("\n\n");
-		printf(" %c | %c | %c\n", board[0][0], board[0][1], board[0][2]);
-		printf("---|---|---\n");
-		printf(" %c | %c | %c\n", board[1][0], board[1][1], board[1][2]);
-		printf("---|---|---\n");
-		printf(" %c | %c | %c\n", board[2][0], board[2][1], board[2][2]);
-
+		renderBoard(board);
 		player = i%2 + 1;
+		
+		getMove(board);
 
 		do
 		{
@@ -54,13 +58,8 @@ int main (void)
 
 	}
 
-		printf("\n\n");
-		printf(" %c | %c | %c\n", board[0][0], board[0][1], board[0][2]);
-		printf("---|---|---\n");
-		printf(" %c | %c | %c\n", board[1][0], board[1][1], board[1][2]);
-		printf("---|---|---\n");
-		printf(" %c | %c | %c\n", board[2][0], board[2][1], board[2][2]);
-
+	renderBoard(board);
+	
 
 		if(winner==0)
 			printf("The game is a draw\n");
